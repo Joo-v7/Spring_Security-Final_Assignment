@@ -1,0 +1,26 @@
+#spring.application.name=rest_security_final
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 660967951255-cqqro6co8s95rnt408a9jbasc9h6ud3a.apps.googleusercontent.com
+            client-secret: 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
+            scope: profile, email
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth?prompt=select_account
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+            user-name-attribute: sub
+
+  data:
+    redis:
+      host: 133.186.241.167
+      port: 6379
+      password: "*N2vya7H@muDTwdNMR!"
+      database: 17
+

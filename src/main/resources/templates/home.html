@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+<h1>홈 페이지</h1>
+
+<p>환영합니다 <span th:text="${userName}"></span> 님</p>
+<p>당신의 권한은 <span th:text="${role}"></span> 입니다.</p>
+
+<a href="/admin/home">ADMIN page</a><br/>
+<a href="/member/home">MEMBER page</a><br/>
+<a href="/google/home">GOOGLE page</a><br/><br/>
+<a href="/logout">Logout</a><br/>
+
+</body>
+</html>

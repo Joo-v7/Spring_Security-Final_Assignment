@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>loginForm</title>
+</head>
+<body>
+<form method="post" action="/loginForm/process" >
+    아이디: <input type="text" name="id"/><br/>
+    비밀번호: <input type="password" name="password"/><br/>
+    <input type="submit"/>
+</form>
+
+<a th:href="@{/oauth2/authorization/google}">
+    <button type="button">Google로 로그인</button>
+</a>
+
+<h3>테스트용 ID/PW</h3>
+<p>MEMBER - ID: member, PW: member</p>
+<p>ADMIN - ID: admin, PW: admin</p>
+<p>GOOGLE - ID: google, PW: google</p>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+### 테스트용 일반 멤버 생성 - json
+POST localhost:8080/members
+Content-Type: application/json
+
+{
+  "id": "ggg",
+  "name": "일반 멤버",
+  "password": "ggg",
+  "age": 20,
+  "role": "MEMBER"
+}
+
+### 테스트용 관리자 생성 - text/csv
+POST localhost:8080/members
+Content-Type: text/csv
+
+admin,관리자,admin,21,ADMIN
+
+### 테스트용 구글 멤버 생성 - google
+POST localhost:8080/members
+Content-Type: application/json
+
+{
+  "id": "google",
+  "name": "구글 멤버",
+  "password": "google",
+  "age": 20,
+  "role": "GOOGLE"
+}
+
+### 전체 멤버 조회
+GET localhost:8080/members
+
+### 단일 멤버 조회 - json
+GET localhost:8080/members/admin
+
+### 단일 멤버 조회 - text/csv
+GET localhost:8080/members/member
+Accept: text/csv
+
+### 단일 멤버 조회 - xml
+GET localhost:8080/members/lee
+Accept: application/xml
